@@ -1,0 +1,516 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #eef0f7;
+  font-family: "Roboto", sans-serif;
+  color: #374574;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 5.5rem;
+}
+@media only screen and (max-width: 900px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+h2 {
+  font-size: 4rem;
+}
+@media only screen and (max-width: 900px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+h3 {
+  font-size: 3rem;
+  font-style: italic;
+}
+@media only screen and (max-width: 1200px) {
+  h3 {
+    font-size: 2.5rem;
+  }
+}
+
+h4,
+h5,
+a {
+  font-weight: 700;
+}
+
+h4 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+a {
+  font-family: "Ubuntu", sans-serif;
+  text-decoration: none;
+  color: #374574;
+}
+
+.btn {
+  background-color: #374574;
+  border: 0.25rem solid #374574;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: #eef0f7;
+  box-shadow: rgba(16, 21, 35, 0.25) 0 0.5rem 1.5rem;
+  transition: all 0.3s;
+}
+.btn:hover, .btn:focus {
+  background-color: #ab7746;
+  border: 0.25rem solid #ab7746;
+}
+
+.card {
+  background-position: center;
+  background-size: cover;
+  width: 25rem;
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(16, 21, 35, 0.25) 0 0.5rem 1.5rem;
+  color: #eef0f7;
+  text-align: center;
+}
+@media only screen and (max-width: 1200px) {
+  .card {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .card {
+    margin: 1rem 0;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6.25rem;
+}
+
+.header {
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.header__home {
+  background-image: linear-gradient(to right bottom, rgba(238, 240, 247, 0.75), rgba(55, 69, 116, 0.75)), url(../img/home-header.jpg);
+  height: 80vh;
+}
+.header__contact {
+  height: 60vh;
+  background-image: linear-gradient(to right bottom, rgba(238, 240, 247, 0.75), rgba(55, 69, 116, 0.75)), url(../img/contact-header.jpg);
+}
+.header__link {
+  margin-top: 2rem;
+}
+
+.nav {
+  width: 100%;
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  box-shadow: rgba(16, 21, 35, 0.25) 0 0.5rem 1.5rem;
+  background-color: #eef0f7;
+  z-index: 100;
+}
+.nav__logo {
+  padding: 0.5rem 1rem;
+  border: 0.25rem solid #374574;
+  transition: all 0.3s;
+}
+.nav__logo:hover {
+  border: 0.25rem solid #ab7746;
+}
+@media only screen and (max-width: 600px) {
+  .nav__logo {
+    align-self: flex-start;
+  }
+}
+.nav__links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 25%;
+}
+.nav__links--link {
+  padding: 0.5rem 1rem;
+  border: 0.25rem solid transparent;
+  transition: all 0.3s;
+}
+.nav__links--link:hover {
+  border: 0.25rem solid #ab7746;
+}
+@media only screen and (max-width: 1880px) {
+  .nav__links {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .nav__links {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .nav__links {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+    display: none;
+  }
+}
+.nav__mobile {
+  display: none;
+}
+.nav__mobile--icon {
+  font-size: 3rem;
+}
+@media only screen and (max-width: 600px) {
+  .nav__mobile {
+    align-self: flex-end;
+    display: initial;
+    position: absolute;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .nav {
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.show {
+  display: inherit;
+}
+
+.hidden {
+  display: none;
+}
+
+.contact__main {
+  margin: 5rem 24rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70vh;
+}
+@media only screen and (max-width: 1880px) {
+  .contact__main {
+    margin: 5rem 10rem;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .contact__main {
+    margin: 5rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .contact__main {
+    flex-direction: column;
+  }
+}
+.contact__form {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+.contact__form--radio {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.contact__form--radio > p {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+.contact__form--radio-input {
+  display: none;
+}
+.contact__form--radio-label {
+  position: relative;
+  padding-left: 2.5rem;
+  cursor: pointer;
+}
+.contact__form--radio-btn {
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 0.25rem solid #374574;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -0.2rem;
+  transition: all 0.3s;
+}
+.contact__form--radio-btn::after {
+  content: "";
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  background-color: #374574;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.contact__form--radio-input:checked ~ .contact__form--radio-label .contact__form--radio-btn::after {
+  opacity: 1;
+}
+.contact__form--btn {
+  align-self: center;
+}
+@media only screen and (max-width: 900px) {
+  .contact__form {
+    width: 100%;
+  }
+}
+.contact__map {
+  width: 45%;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 10% 1fr 10%;
+  grid-template-columns: 10% 1fr 10%;
+}
+.contact__map--map {
+  grid-row: 2/4;
+  grid-column: 1/3;
+  z-index: 1;
+  box-shadow: rgba(16, 21, 35, 0.25) 0 0.5rem 1.5rem;
+}
+.contact__map--background {
+  grid-row: 1/3;
+  grid-column: 2/4;
+  background-color: #374574;
+}
+@media only screen and (max-width: 900px) {
+  .contact__map {
+    width: 100%;
+    padding: 3rem 0;
+  }
+}
+
+input,
+textarea {
+  border: 0.25rem solid #374574;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem 0 1rem 0;
+  transition: all 0.3s;
+  background-color: #eef0f7;
+  color: #374574;
+  font-size: 1rem;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 0.25rem solid #ab7746;
+}
+
+textarea {
+  height: 10rem;
+}
+
+.home__about {
+  margin: 5rem 20rem;
+  display: flex;
+  justify-content: space-between;
+  height: 70vh;
+}
+.home__about--images {
+  width: 55%;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(10, 1fr);
+}
+.home__about--images-background {
+  grid-column: 4/8;
+  grid-row: 1/-1;
+  background-color: #374574;
+}
+.home__about--images-1 {
+  grid-row: 2/4;
+  grid-column: 5/-1;
+  background-image: url(../img/luxus-food-1.jpg);
+  background-position: center;
+  background-size: cover;
+  box-shadow: rgba(16, 21, 35, 0.25) 0 0.5rem 1.5rem;
+}
+.home__about--images-2 {
+  grid-row: 3/5;
+  grid-column: 1/7;
+  background-image: url(../img/luxus-food-2.jpg);
+  background-position: center;
+  background-size: cover;
+  box-shadow: rgba(16, 21, 35, 0.25) 0 0.5rem 1.5rem;
+}
+@media only screen and (max-width: 900px) {
+  .home__about--images {
+    width: 100%;
+    height: 100vh;
+  }
+}
+.home__about--content {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+@media only screen and (max-width: 900px) {
+  .home__about--content {
+    width: 100%;
+    height: 75vh;
+  }
+}
+@media only screen and (max-width: 1880px) {
+  .home__about {
+    height: 100vh;
+    margin: 5rem 10rem;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .home__about {
+    margin: 5rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .home__about {
+    flex-wrap: wrap;
+    height: max-content;
+  }
+}
+.home__menus {
+  margin: 5rem 20rem;
+  display: flex;
+  justify-content: space-between;
+}
+.home__menus--lunch {
+  background-image: linear-gradient(to right bottom, rgba(55, 69, 116, 0.5), rgba(55, 69, 116, 0.5)), url(../img/lunch-menu.jpg);
+  transition: all 0.3s;
+}
+.home__menus--lunch-heading {
+  border: 0.25rem solid #eef0f7;
+  padding: 0.5rem 1rem;
+}
+.home__menus--lunch:hover {
+  background-image: linear-gradient(to right bottom, rgba(171, 119, 70, 0.5), rgba(171, 119, 70, 0.5)), url(../img/lunch-menu.jpg);
+}
+.home__menus--tea {
+  background-image: linear-gradient(to right bottom, rgba(55, 69, 116, 0.5), rgba(55, 69, 116, 0.5)), url(../img/afternoon-tea-menu.jpg);
+  transition: all 0.3s;
+}
+.home__menus--tea-heading {
+  border: 0.25rem solid #eef0f7;
+  padding: 0.5rem 1rem;
+}
+.home__menus--tea:hover {
+  background-image: linear-gradient(to right bottom, rgba(171, 119, 70, 0.5), rgba(171, 119, 70, 0.5)), url(../img/afternoon-tea-menu.jpg);
+}
+.home__menus--dinner {
+  background-image: linear-gradient(to right bottom, rgba(55, 69, 116, 0.5), rgba(55, 69, 116, 0.5)), url(../img/dinner-menu.jpg);
+  transition: all 0.3s;
+}
+.home__menus--dinner-heading {
+  border: 0.25rem solid #eef0f7;
+  padding: 0.5rem 1rem;
+}
+.home__menus--dinner:hover {
+  background-image: linear-gradient(to right bottom, rgba(171, 119, 70, 0.5), rgba(171, 119, 70, 0.5)), url(../img/dinner-menu.jpg);
+}
+@media only screen and (max-width: 1880px) {
+  .home__menus {
+    margin: 5rem 10rem;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .home__menus {
+    margin: 5rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .home__menus {
+    margin: 5rem 0;
+    flex-wrap: wrap;
+    height: max-content;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.home__cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background-color: #374574;
+  color: #eef0f7;
+}
+.home__cta--content {
+  border: 0.25rem solid #eef0f7;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 50%;
+  text-align: center;
+}
+.home__cta--btn {
+  background-color: #eef0f7;
+  color: #374574;
+}
+@media only screen and (max-width: 1880px) {
+  .home__cta {
+    height: 70vh;
+  }
+}
+
+/*# sourceMappingURL=styles.comp.css.map */

@@ -1,0 +1,17 @@
+.btn {
+  background-color: $color-primary;
+  border: 0.25rem solid $color-primary;
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: $color-grey;
+  box-shadow: $box-shadow;
+  transition: all 0.3s;
+
+  &:hover,
+  &:focus {
+    background-color: $color-secondary;
+    border: 0.25rem solid $color-secondary;
+  }
+}

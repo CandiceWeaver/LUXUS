@@ -1,0 +1,21 @@
+.card {
+  background-position: center;
+  background-size: cover;
+  width: 25rem;
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: $box-shadow;
+  color: $color-grey;
+  text-align: center;
+
+  @include respond(laptop) {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  @include respond(tablet) {
+    margin: 1rem 0;
+  }
+}

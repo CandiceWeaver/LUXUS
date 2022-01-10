@@ -1,0 +1,88 @@
+.nav {
+  width: 100%;
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  box-shadow: $box-shadow;
+  background-color: $color-grey;
+  z-index: 100;
+
+  &__logo {
+    padding: 0.5rem 1rem;
+    border: 0.25rem solid $color-primary;
+    transition: all 0.3s;
+
+    &:hover {
+      border: 0.25rem solid $color-secondary;
+    }
+
+    @include respond(mobile) {
+      align-self: flex-start;
+    }
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%;
+
+    &--link {
+      padding: 0.5rem 1rem;
+      border: 0.25rem solid transparent;
+      transition: all 0.3s;
+
+      &:hover {
+        border: 0.25rem solid $color-secondary;
+      }
+    }
+
+    @include respond(desktop) {
+      width: 50%;
+    }
+
+    @include respond(tablet) {
+      width: 75%;
+    }
+
+    @include respond(mobile) {
+      flex-direction: column;
+      width: 100%;
+      margin-top: 1rem;
+      display: none;
+    }
+  }
+
+  &__mobile {
+    display: none;
+
+    &--icon {
+      font-size: 3rem;
+    }
+
+    @include respond(mobile) {
+      align-self: flex-end;
+      display: initial;
+      position: absolute;
+    }
+  }
+
+  @include respond(tablet) {
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+
+  @include respond(mobile) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.show {
+  display: inherit;
+}
+
+.hidden {
+  display: none;
+}
